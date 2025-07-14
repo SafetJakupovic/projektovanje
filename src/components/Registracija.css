@@ -1,0 +1,19 @@
+.registracija-layout {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-image: url("/bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.registracija-dugme {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  padding-bottom: 4%;
+}

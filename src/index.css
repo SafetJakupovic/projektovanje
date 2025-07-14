@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+  background-image: url("/bg-image-2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body.bg-image-2 {
+  background-image: url("/bg-image.png");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #6A4E4E;
+}
+
+a {
+  text-decoration: none;
+}
+
+.prednjastrana {
+  margin-top: 15%;
+  margin-left: 20px;
+}
+
+.prednjastrana h1 {
+  font-size: 80px;
+  font-family: "Abril Fatface";
+  text-decoration: underline;
+  color: #978282;
+  margin: 0;
+}
+
+.prednjastrana h2 {
+  font-size: 30px;
+  color: #978282;
+  margin: 0;
+  font-family: "Inria Serif";
+  font-style: italic;
+}
+
+.naslov h1 {
+  padding-top: 60px;
+  font-family: "Abril Fatface";
+  margin-left: 20px;
+}

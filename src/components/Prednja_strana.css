@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.prednjastrana {
+  margin-top: 20%;
+  margin-left: 20px;
+}
+
+.prednjastrana h1 {
+  font-size: 80px;
+  font-family: "Abril Fatface";
+  text-decoration: underline;
+  color: #978282;
+  margin: 0;
+}
+
+.prednjastrana h2 {
+  font-size: 30px;
+  color: #978282;
+  margin: 0;
+  font-family: "Inria Serif";
+  font-style: italic;
+}
