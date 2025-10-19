@@ -1,18 +1,40 @@
-import React from 'react';
-import './Prijava.css';
+import React from 'react'; 
+import './Prijava.css'; 
 import { Link } from 'react-router-dom';
 
-export default function Prijava() {
+const Prijava = () => {
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const username = e.target[0].value;
+    const password = e.target[1].value;
+
+    try {
+      const res = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+      });
+
+      const text = await res.text();
+      alert(text);
+    } catch (err) {
+      console.error(err);
+      alert("Greska pri prijavi");
+    }
+  }
+
   return (
     <div className='prijava-layout'>
       <div className='pale-outline'>
         <h1>visit BANJALUKA</h1>
         <div className='wrapper'>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <h1>Dobrodošli</h1>
             <div className='input-box'>
               <input type="text" placeholder='Broj telefona, e-mail' required />
             </div>
+
             <div className='input-box'>
               <input type="password" placeholder='Lozinka' required />
             </div>
@@ -23,11 +45,15 @@ export default function Prijava() {
             </div>
 
             <div className='registracija-link'>
-              <p>Nemaš nalog? <Link to="/registracija">Registruj se</Link> </p>
+              <p>Nemaš nalog? <Link to="/registracija">Registruj se</Link></p>
             </div>
           </form>
         </div>
       </div>
     </div>
   );
+
+
 }
+
+export default Prijava;
